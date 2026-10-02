@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Urna Eletrônica - Grêmio Estudantil</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="urna">
+
+        <header class="topo">
+
+            <div class="logo-area">
+                <img
+                    id="logo-gremio"
+                    src="imagens/logo-gremio.png"
+                    alt="Logo do Grêmio"
+                >
+            </div>
+
+            <div class="titulo-topo">
+                <h1>GRÊMIO ESTUDANTIL</h1>
+                <p>ESCOLA PROFESSOR VICENTE PEIXOTO</p>
+            </div>
+
+        </header>
+
+
+        <main class="corpo">
+
+            <section class="tela">
+
+                <div class="faixa-titulo">
+                    ELEIÇÃO DO GRÊMIO ESTUDANTIL
+                </div>
+
+                <div class="conteudo-tela">
+
+                    <div class="texto-superior">
+                        SEU VOTO PARA
+                    </div>
+
+                    <div class="cargo">
+                        CHAPA DO GRÊMIO
+                    </div>
+
+                    <div class="linha-voto">
+
+                        <div class="informacoes">
+
+                            <div class="campo-numero">
+                                <span>Número:</span>
+
+                                <div id="numero-digitado">
+                                    <span id="digitos"></span>
+                                </div>
+                            </div>
+
+                            <div class="campo">
+                                <span>Nome:</span>
+                                <strong id="nome-chapa"></strong>
+                            </div>
+
+                            <div class="campo">
+                                <span>Situação:</span>
+                                <strong id="situacao"></strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="foto-area">
+
+                            <img
+                                id="foto-chapa"
+                                src=""
+                                alt="Foto da chapa"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="mensagem" class="mensagem"></div>
+
+                </div>
+
+
+                <div class="rodape-tela">
+
+                    <p>
+                        Digite o número da chapa
+                    </p>
+
+                    <p>
+                        <strong>CONFIRMA</strong>
+                        para confirmar este voto
+                    </p>
+
+                    <p>
+                        <strong>CORRIGE</strong>
+                        para reiniciar este voto
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="teclado">
+
+                <div class="numeros">
+
+                    <button onclick="digitar(1)">1</button>
+                    <button onclick="digitar(2)">2</button>
+                    <button onclick="digitar(3)">3</button>
+
+                    <button onclick="digitar(4)">4</button>
+                    <button onclick="digitar(5)">5</button>
+                    <button onclick="digitar(6)">6</button>
+
+                    <button onclick="digitar(7)">7</button>
+                    <button onclick="digitar(8)">8</button>
+                    <button onclick="digitar(9)">9</button>
+
+                    <div></div>
+
+                    <button onclick="digitar(0)">0</button>
+
+                    <div></div>
+
+                </div>
+
+
+                <div class="botoes-comando">
+
+                    <button
+                        class="btn-branco"
+                        onclick="branco()"
+                    >
+                        BRANCO
+                    </button>
+
+                    <button
+                        class="btn-corrige"
+                        onclick="corrigir()"
+                    >
+                        CORRIGE
+                    </button>
+
+                    <button
+                        class="btn-confirma"
+                        onclick="confirmar()"
+                    >
+                        CONFIRMA
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="rodape">
+
+            <span>
+                SISTEMA DE VOTAÇÃO DO GRÊMIO ESTUDANTIL
+            </span>
+
+            <span>
+                ELEIÇÃO ESCOLAR
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

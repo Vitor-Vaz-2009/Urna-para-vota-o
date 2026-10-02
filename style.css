@@ -1,0 +1,623 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3b3b3b 0%,
+            #222 45%,
+            #111 100%
+        );
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CORPO DA URNA
+========================= */
+
+.urna {
+
+    width: 100vw;
+    height: 100vh;
+
+    max-width: none;
+
+    background: #d0d0d0;
+
+    border: 0;
+
+    border-radius: 0;
+
+    box-shadow:
+        inset 0 0 0 2px #eeeeee;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.topo {
+
+    height: 105px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            #eeeeee,
+            #cfcfcf
+        );
+
+    border-bottom: 4px solid #999;
+}
+
+
+.logo-area {
+
+    width: 150px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 2px solid #aaa;
+}
+
+
+#logo-gremio {
+
+    width: 105px;
+    height: 105px;
+
+    object-fit: contain;
+}
+
+
+.titulo-topo {
+
+    padding-left: 25px;
+}
+
+
+.titulo-topo h1 {
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    color: #222;
+}
+
+
+.titulo-topo p {
+
+    margin-top: 6px;
+
+    font-size: 15px;
+
+    color: #444;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CORPO
+========================= */
+
+.corpo {
+
+    display: grid;
+
+    grid-template-columns: 68% 32%;
+
+    flex: 1;
+
+    min-height: 0;
+
+    background: #c5c5c5;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TELA
+========================= */
+
+.tela {
+
+    min-width: 0;
+
+    min-height: 0;
+
+    background: #f8f8f8;
+
+    border-right: 5px solid #555;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+.faixa-titulo {
+
+    padding: 18px 25px;
+
+    background: #eeeeee;
+
+    border-bottom: 2px solid #aaa;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    flex-shrink: 0;
+}
+
+
+.conteudo-tela {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 30px 35px;
+
+    overflow: hidden;
+}
+
+
+.texto-superior {
+
+    font-size: 17px;
+
+    color: #333;
+
+    margin-bottom: 20px;
+}
+
+
+.cargo {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    color: #222;
+}
+
+
+/* =========================
+   INFORMAÇÕES DO VOTO
+========================= */
+
+.linha-voto {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    min-width: 0;
+}
+
+
+.informacoes {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.campo-numero {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.campo-numero > span,
+.campo > span {
+
+    font-size: 18px;
+}
+
+
+#numero-digitado {
+
+    min-width: 130px;
+
+    height: 52px;
+
+    border: 2px solid #555;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 8px;
+}
+
+
+.campo {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 18px 0;
+
+    font-size: 18px;
+}
+
+
+.campo strong {
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.foto-area {
+
+    width: 190px;
+
+    height: 190px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #777;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+#foto-chapa {
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.mensagem {
+
+    margin-top: 40px;
+
+    min-height: 40px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #222;
+}
+
+
+/* =========================
+   RODAPÉ DA TELA
+========================= */
+
+.rodape-tela {
+
+    min-height: 110px;
+
+    flex-shrink: 0;
+
+    padding: 18px 25px;
+
+    border-top: 2px solid #999;
+
+    background: #eeeeee;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TECLADO
+========================= */
+
+.teclado {
+
+    min-width: 0;
+
+    min-height: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #505050,
+            #292929
+        );
+
+    padding: 35px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   NÚMEROS
+========================= */
+
+.numeros {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 85px);
+
+    grid-template-rows:
+        repeat(4, 65px);
+
+    gap: 13px;
+
+    justify-content: center;
+}
+
+
+.numeros button {
+
+    border-radius: 5px;
+
+    border: 2px solid #111;
+
+    background:
+        linear-gradient(
+            #4a4a4a,
+            #252525
+        );
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,0.15),
+        0 3px 4px rgba(0,0,0,0.5);
+
+    cursor: pointer;
+}
+
+
+.numeros button:hover {
+
+    background:
+        linear-gradient(
+            #5a5a5a,
+            #303030
+        );
+}
+
+
+.numeros button:active {
+
+    transform: translateY(2px);
+
+    box-shadow:
+        inset 0 2px 5px rgba(0,0,0,0.8);
+}
+
+
+/* =========================
+   BOTÕES DE COMANDO
+========================= */
+
+.botoes-comando {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.botoes-comando button {
+
+    height: 58px;
+
+    border-radius: 5px;
+
+    border: 2px solid #111;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 4px rgba(0,0,0,0.5);
+}
+
+
+.btn-branco {
+
+    background: #eeeeee;
+
+    color: #111;
+}
+
+
+.btn-corrige {
+
+    background: #e6a33a;
+
+    color: #111;
+}
+
+
+.btn-confirma {
+
+    background: #3e9b54;
+
+    color: white;
+
+    font-size: 19px !important;
+}
+
+
+.botoes-comando button:active {
+
+    transform: translateY(2px);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    background: #222;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   TELAS MENORES
+========================= */
+
+@media (max-width: 850px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .urna {
+
+        height: auto;
+
+        min-height: 100vh;
+
+        overflow: visible;
+    }
+
+    .corpo {
+
+        grid-template-columns: 1fr;
+
+        overflow: visible;
+    }
+
+    .tela {
+
+        border-right: none;
+
+        border-bottom: 5px solid #555;
+
+        overflow: visible;
+    }
+
+    .teclado {
+
+        padding: 25px;
+
+        overflow: visible;
+    }
+
+}
